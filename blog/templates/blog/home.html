@@ -1,0 +1,16 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+
+{% block content %}
+  <div class="container">
+    <h4 class="text-center my-5">Home</h4>
+    {% for post in posts %}
+        <div class="p-2 ">
+          <div class="height-100 p-4" style="background-color:rgb(225, 245, 254); border-radius:20px">
+            <h2>{{post.title}}</h2>
+            <p>{{post.description}}</p>
+          </div>
+        </div>
+    {% endfor %}
+  </div>
+{% endblock content %}

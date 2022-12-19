@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static "blog/css/bootstrap.css" %}">
+        <link rel="stylesheet" href="{% static "blog/css/style.css" %}">
+    </head>
+    <body>
+       {% include "blog/navbar.html" %}
+       
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    {% block message %}
+                    {% endblock message %}  
+                </div>             
+            </div>
+            <div class="row">
+                {% block side %}
+                {% endblock side %}
+
+                {% block content %}
+                {% endblock content %}
+            </div class="row">
+        </div>
+        <script src="{% static "blog/js/bootstrap.js" %}" async defer></script>
+        <script src="{% static "blog/js/jquery.js" %}" async defer></script>
+        <script src="{% static "blog/js/popper.js" %}" async defer></script> 
+    </body>
+</html>
